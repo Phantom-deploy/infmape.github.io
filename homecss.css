@@ -1,7 +1,7 @@
 /* homecss.css */
 
 body {
-    background-image: url('images/Cover (8).png');
+    background-image: url('Cover (8).png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -63,6 +63,8 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    font-weight: bold;
+    text-align: center;
 }
 
 .small-text {
@@ -97,6 +99,15 @@ body {
     -webkit-background-clip: text;
     border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.big-title {
+    text-align: center; /* Center the text */
+    color: white;
+    font-size: 5.9rem;
+    font-weight: bold;
+    margin-top: 150px;
+    font-family: 'Lexend', sans-serif; /* Add font family */
 }
 
 .purple-button:hover {
