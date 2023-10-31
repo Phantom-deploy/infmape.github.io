@@ -152,16 +152,12 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
-    border: 2px solid white; /* Add a white border */
+    border: 2px solid white;
 }
 
-.glow-on-hover:active, .glow-on-hover:hover {
-    color: #000;
-    border: none; /* Remove the border on hover and click */
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
+.glow-on-hover:active {
+    color: #000; /* Change text to black on click */
+    border: none; /* Remove the border on click */
 }
 
 .glow-on-hover:hover:before {
@@ -178,7 +174,7 @@ body {
     left: 0;
     top: 0;
     border-radius: 10px;
-    border: 2px solid white; /* Add a white border */
+    border: 2px solid white;
 }
 
 @keyframes glowing {
@@ -186,3 +182,4 @@ body {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
