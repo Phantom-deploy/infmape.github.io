@@ -6,8 +6,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 300;
+    font-family: 'Lexend', sans-serif; /* Specify the font-family for the entire document */
 }
 
 .navbar {
@@ -18,7 +17,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 35px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space between;
     align-items: center;
 }
 
@@ -55,16 +54,32 @@ body {
     padding: 10px;
     border: 2px solid transparent;
     border-radius: 10px;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Lexend', sans-serif; /* Specify the font-family for the navigation links */
 }
 
-.purple-gradient-text {
-    background: linear-gradient(to right, #613FBD, #575DB4, #565FB3, #7A87FF, #185BA9);
+.logo {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    padding: 10px;
+}
+
+.logo img {
+    max-width: 50px;
+}
+.big-title {
+    text-align: center;
+    color: white;
+    font-size: 5.9rem;
+    font-weight: bold;
+    margin-top: 150px;
+}
+
+.purple-gradient {
+    background: linear-gradient(to right, #ffffff, #8000FF);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-weight: bold;
-    text-align: center;
 }
 
 .small-text {
@@ -94,20 +109,11 @@ body {
     font-size: 1.2rem;
     cursor: pointer;
     text-align: center;
-    transition: background 0.3s, transform 0.3s, color 0.3s, box-shadow 0.3s;
-    background-clip: text;
+    transition: background 0.3s, transform 0.3s, color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    background-clip: text; /* Add gradient to the button text */
     -webkit-background-clip: text;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.big-title {
-    text-align: center; /* Center the text */
-    color: white;
-    font-size: 5.9rem;
-    font-weight: bold;
-    margin-top: 150px;
-    font-family: 'Lexend', sans-serif; /* Add font family */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Add glass-like border */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Add glass-like shadow */
 }
 
 .purple-button:hover {
