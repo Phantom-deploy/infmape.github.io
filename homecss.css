@@ -7,6 +7,7 @@ body {
     background-attachment: fixed;
     margin: 0;
     font-family: 'Lexend', sans-serif; /* Specify the font-family for the entire document */
+    font-weight: 300; /* Make the font slightly thinner */
 }
 
 .navbar {
@@ -17,7 +18,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 35px;
     display: flex;
-    justify-content: space between;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -109,11 +110,11 @@ body {
     font-size: 1.2rem;
     cursor: pointer;
     text-align: center;
-    transition: background 0.3s, transform 0.3s, color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
-    background-clip: text; /* Add gradient to the button text */
+    transition: background 0.3s, transform 0.3s, color 0.3s, box-shadow 0.3s;
+    background-clip: text;
     -webkit-background-clip: text;
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Add glass-like border */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Add glass-like shadow */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .purple-button:hover {
