@@ -160,6 +160,10 @@ body {
     border: none; /* Remove the border on click */
 }
 
+.glow-on-hover:active:before {
+    opacity: 1; /* Keep the rainbow effect on click */
+}
+
 .glow-on-hover:hover:before {
     opacity: 1;
 }
