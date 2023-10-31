@@ -1,7 +1,7 @@
 /* homecss.css */
 
 body {
-    background-image: url('images/cover(8).png');
+    background-image: url('cover(8).png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
