@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-image: url('Images/Selection-bg.png');
+  background-size: cover;
+
+}
+.logo {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  padding: 10px;
+}
+
+.logo img {
+  max-width: 50px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 15px;
+}
+
+form {
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.input-group {
+  position: relative;
+}
+
+#search {
+  width: 100%;
+  padding: 8px 30px 8px 12px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  outline: none;
+  font-size: 16px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06);
+  color: #F27121;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 1px;
+  transition: all 0.2s ease;
+}
+
+#search:focus {
+  border-color: #F27121;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+#apps {
+  margin-top: 42px;
+}
+
+.app {
+  display: inline-block;
+  width: 20%;
+  margin: 0 2.2% 24px;
+  padding: 12px 6px;
+  text-align: center;
+  border: 1px solid rgba(128, 128, 128, 0.5); /* Thinner grey border */
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0); /* Initial glow effect, 0px spread */
+}
+
+.app:hover {
+  border: 1px solid rgba(128, 128, 128, 0.2); /* Thinner and lighter grey border */
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.7); /* Glow effect on hover, increase the spread to make it glow more */
+}
+
+.app i {
+  font-size: 2.4em;
+  color: #fff;
+}
+
+.app p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin-top: 6px;
+  transition: 0.2s all ease;
+}
+
+.app:hover p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.suggestion-list {
+  background-color: #fff;
+  padding: 18px 24px 6px 12px;
+  border-radius: 0 0 6px 6px;
+  position: absolute;
+  width: 100%;
+  margin-top: 0px;
+  border: 2px solid #F27121;
+  border-top: none;
+}
+
+.suggestion-list.hidden {
+  display: none;
+}
+
+.suggestion-list p {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.suggestion-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+
+.suggestion-list i {
+  margin-right: 12px;
+  color: #F27121;
+}

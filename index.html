@@ -31,8 +31,25 @@
     </div>
     <p class="small-text">Proxies, Games, Multiple Sites, and More</p>
     <center>
-        <button class="glow-on-hover" type="button">Play Now!</button>
+        <button class="glow-on-hover" type="button" id="playButton">Play Now!</button>
     </center>
     <div class="line"></div>
+    <script>
+      const playButton = document.querySelector('#playButton');
+    const iframe = document.createElement('iframe');
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.position = 'absolute';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.bottom = '0';
+    iframe.style.right = '0';
+
+    playButton.addEventListener('click', () => {
+        const newWindow = window.open('about:blank', '_blank');
+        iframe.src = 'https://infmapr.netlify.app/';
+        newWindow.document.body.appendChild(iframe);
+    });
+    </script>
 </body>
 </html>
