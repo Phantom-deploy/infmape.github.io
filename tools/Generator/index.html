@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Links</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.gif');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.0);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .proxy-title {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .info-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            margin-top: 20px;
+        }
+
+        .warning-text {
+        font-size: 16px;
+        font-weight: bold;
+        color: red; /* Set the text color to red */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        margin-top: 20px;
+        text-align: center; /* Center align the text */
+        width: 100%; /* Make the text span the full width */
+        position: absolute;
+        top: 20px;
+        left: 0; /* Adjust the left position as needed */
+    }
+        .btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .open-button,
+        .home-button {
+            background-color: #000;
+            color: #fff;
+            border: 2px solid white;
+            padding: 20px 40px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s, text-shadow 0.3s;
+        }
+
+        .open-button:hover,
+        .home-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Styling for the Home button */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px; /* Smaller size */
+            font-size: 14px; /* Smaller font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="proxy-title">Proxy Generator</div>
+        <div class="info-text">This is a proxy generator and generates a new link every time to the same proxy when launched. 1/5 times it launches the same URL.</div>
+    </div>
+    <div class="warning-text">Make sure to allow pop-ups or it won't work.</div>
+    <div class="btn-container">
+        <button class="open-button" id="openButton">Launch URL</button>
+        <a href="./selection.html" class="home-button">Home</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const openButton = document.getElementById("openButton");
+
+            const links = [
+            "https://interstellar-2nz3.vercel.app/",
+                "https://interstellar-swart.vercel.app/",
+                "https://interstellar-ku19.vercel.app/",
+                "https://bobbisstupid.vercel.app/",
+                "https://bobbisaguy.vercel.app/",
+                "https://ilikebobb.vercel.app/",
+                "https://boddyyguy-dev-djfp.1.ie-1.fl0.io/",
+                "https://bobisgay-dev-pfjb.2.ie-1.fl0.io",
+                "https://ndjsbcunsnjsnc.onrender.com/",
+                "https://schooltech-z8fa.onrender.com/",
+                "https://angleton.sen.org.nz/",
+                "https://schoolmathread.wild1.net/",
+            ];
+
+            openButton.addEventListener("click", function () {
+                const randomIndex = Math.floor(Math.random() * links.length);
+                const selectedURL = links[randomIndex];
+                const newWindow = window.open('about:blank', '_blank');
+                const iframe = document.createElement('iframe');
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.position = 'absolute';
+                iframe.style.top = '0';
+                iframe.style.left = '0';
+                iframe.style.bottom = '0';
+                iframe.style.right = '0';
+                iframe.src = selectedURL;
+                newWindow.document.body.appendChild(iframe);
+            });
+        });
+    </script>
+</body>
+</html>

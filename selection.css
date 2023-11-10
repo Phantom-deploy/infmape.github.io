@@ -1,14 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
-}
-
+/* CSS for /projects */
 body {
-  background-image: url('Images/Selection-bg.png');
+  font-family: sans-serif;
+  font-size: 25px;
+  color: #ffffff;
+  text-align: left;
+  background-image: url('Images/mainbg.avif'); /* Update this line */
+  background-repeat: repeat;
   background-size: cover;
-
 }
 .logo {
   position: absolute;
@@ -20,115 +18,109 @@ body {
 .logo img {
   max-width: 50px;
 }
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 60px 15px;
+a {
+  text-decoration: none;
+  color: #0084ff;
 }
-
-form {
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.input-group {
-  position: relative;
-}
-
-#search {
-  width: 100%;
-  padding: 8px 30px 8px 12px;
-  border: 2px solid rgba(0, 0, 0, 0.08);
-  outline: none;
-  font-size: 16px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06);
-  color: #F27121;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-radius: 1px;
-  transition: all 0.2s ease;
-}
-
-#search:focus {
-  border-color: #F27121;
-}
-
-.search-icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 8px;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-}
-
-#apps {
-  margin-top: 42px;
-}
-
-.app {
-  display: inline-block;
-  width: 20%;
-  margin: 0 2.2% 24px;
-  padding: 12px 6px;
+.text-center {
   text-align: center;
-  border: 1px solid rgba(128, 128, 128, 0.5); /* Thinner grey border */
-  border-radius: 5px;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 10px rgba(255, 165, 0, 0); /* Initial glow effect, 0px spread */
+}
+.game-link {
+  height: 400px;
+  width: 300px;
+}
+.game-tile {
+  background: linear-gradient(135deg, #3498db, #9b59b6); /* Blue to Purple gradient */
+  height: 400px;
+  width: 300px;
+  color: #ffffff;
+  border-radius: 30px;
+  -webkit-animation: scale-down-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-down-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.app:hover {
-  border: 1px solid rgba(128, 128, 128, 0.2); /* Thinner and lighter grey border */
-  box-shadow: 0 0 10px rgba(255, 165, 0, 0.7); /* Glow effect on hover, increase the spread to make it glow more */
+.game-tile:hover {
+  text-decoration: none;
+  -webkit-animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
-
-.app i {
-  font-size: 2.4em;
-  color: #fff;
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
-
-.app p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
-  margin-top: 6px;
-  transition: 0.2s all ease;
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
-
-.app:hover p {
-  color: rgba(255, 255, 255, 0.8);
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
-
-.suggestion-list {
-  background-color: #fff;
-  padding: 18px 24px 6px 12px;
-  border-radius: 0 0 6px 6px;
-  position: absolute;
-  width: 100%;
-  margin-top: 0px;
-  border: 2px solid #F27121;
-  border-top: none;
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
-
-.suggestion-list.hidden {
-  display: none;
+.game-icon {
+  border-radius: 30px;
+  width: 300px;
+  height: 300px;
 }
-
-.suggestion-list p {
-  margin-bottom: 12px;
+.game-title {
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+.flex-container {
   display: flex;
+  flex-direction: row;
+  order: 0;
+  flex-grow: 0;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+}
+.container {
+  padding: 10px;
+}
+.badge {
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+#mySearch {
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  padding: 11px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #8e44ad, #673ab7); /* Cool Purple Gradient */
+  color: #ffffff; /* White text color */
 }
 
-.suggestion-image {
-  width: 20px;
-  height: 20px;
-  margin-right: 12px;
-}
-
-.suggestion-list i {
-  margin-right: 12px;
-  color: #F27121;
-}
